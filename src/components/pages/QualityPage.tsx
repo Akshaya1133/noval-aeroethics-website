@@ -1,0 +1,167 @@
+'use client';
+
+import Image from 'next/image';
+import { qualityData } from '@/lib/company-data';
+import { Shield, CheckCircle2, Ruler, ClipboardCheck } from 'lucide-react';
+
+export default function QualityPage() {
+  return (
+    <div>
+      {/* Hero Banner */}
+      <section className="bg-[#0A1F44] py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
+            Quality Assurance
+          </p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-white max-w-3xl">
+            Committed to Excellence in Every Component
+          </h1>
+        </div>
+      </section>
+
+      {/* ISO Certification */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
+                Certification
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1F44] mb-6">
+                ISO Certified Operations
+              </h2>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Noval Aeroethics operates under a certified quality management system that governs every aspect of our manufacturing process. Our ISO certification demonstrates our commitment to maintaining international quality standards, continuous improvement, and customer satisfaction across all operations.
+              </p>
+              <div className="flex items-center gap-3 bg-[#F8FAFC] rounded-xl p-5 border border-slate-100">
+                <div className="w-12 h-12 rounded-lg bg-[#10B981] flex items-center justify-center flex-shrink-0">
+                  <Shield className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#0A1F44]">ISO Certified Company</p>
+                  <p className="text-xs text-slate-500">Quality Management System Implemented</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 flex items-center justify-center">
+                <Image
+                  src="/images/quality-instruments.jpg"
+                  alt="Quality measuring instruments"
+                  width={1344}
+                  height={768}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quality Policy */}
+      <section className="py-20 bg-[#F8FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
+              Our Commitment
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1F44]">
+              Quality Policy
+            </h2>
+          </div>
+          <div className="max-w-3xl mx-auto mb-12">
+            <p className="text-slate-600 leading-relaxed text-center">
+              {qualityData.policyDescription}
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {qualityData.policy.map((item, i) => {
+              const icons = [Shield, Ruler, ClipboardCheck, CheckCircle2];
+              const Icon = icons[i] || Shield;
+              return (
+                <div
+                  key={i}
+                  className="bg-white rounded-xl p-6 text-center border border-slate-100 shadow-sm"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#0A1F44] flex items-center justify-center mx-auto mb-4">
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
+                  <p className="text-sm font-semibold text-[#0A1F44]">{item}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Measuring Instruments */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
+              Equipment
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1F44]">
+              Quality Measuring Instruments
+            </h2>
+            <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+              We employ a comprehensive suite of calibrated precision instruments to ensure every component meets exact specifications.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {qualityData.instruments.map((instrument, i) => (
+              <div
+                key={i}
+                className="bg-[#F8FAFC] rounded-xl p-5 border border-slate-100 hover:border-[#1B5E9E] transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center mb-3">
+                  <Ruler className="h-5 w-5 text-[#1B5E9E]" />
+                </div>
+                <h3 className="text-sm font-semibold text-[#0A1F44] mb-1.5">
+                  {instrument.name}
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  {instrument.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inspection Process */}
+      <section className="py-20 bg-[#F8FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
+              Process
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1F44]">
+              Inspection Process
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {qualityData.inspectionProcess.map((step) => (
+              <div
+                key={step.step}
+                className="bg-white rounded-xl p-6 border border-slate-100 shadow-sm flex gap-5"
+              >
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1B5E9E] text-white flex items-center justify-center text-lg font-bold">
+                  {step.step}
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-[#0A1F44] mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
