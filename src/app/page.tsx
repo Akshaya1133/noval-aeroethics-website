@@ -22,6 +22,7 @@ function PageRouter() {
     products: <ProductsPage />,
     quality: <QualityPage />,
     contact: <ContactPage />,
+    enquiry: <ContactPage />,
   };
 
   return (

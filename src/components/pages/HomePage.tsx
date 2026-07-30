@@ -13,8 +13,7 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <section className="relative bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 lg:pt-8 pb-16 lg:pb-20">          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-[#1B5E9E] font-semibold text-sm tracking-wide uppercase mb-4">
                 Precision Engineering
@@ -42,42 +41,68 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/hero-cnc.jpg"
-                  alt="Modern CNC machining center in aerospace manufacturing facility"
-                  width={1344}
-                  height={768}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
-            </div>
+             <div className="relative">
+  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
+
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/videos/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    {/* Premium overlay */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-[#0A1F44]/20 via-transparent to-[#10B981]/10"></div>
+
+  </div>
+</div>
           </div>
         </div>
       </section>
 
       {/* Company Highlights */}
-      <section className="bg-[#F8FAFC] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {highlights.map((item, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-xl p-6 text-center shadow-sm border border-slate-100"
-              >
-                <div className="text-3xl lg:text-4xl font-bold text-[#0A1F44] mb-2">
-                  {item.value}
-                </div>
-                <div className="text-sm text-slate-500 font-medium">
-                  {item.label}
-                </div>
-              </div>
-            ))}
+<section className="bg-[#F8FAFC] py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {highlights.map((item, i) => (
+        <div
+          key={i}
+          onClick={() => {
+            if (item.label === "ISO Certified") {
+              window.open("/certificates/iso-9001.pdf", "_blank");
+            }
+          }}
+          className={`bg-white rounded-xl p-6 text-center shadow-sm border border-slate-100 transition-all duration-300 ${
+            item.label === "ISO Certified"
+              ? "cursor-pointer hover:shadow-xl hover:-translate-y-1"
+              : ""
+          }`}
+        >
+          <div className="text-3xl lg:text-4xl font-bold text-[#0A1F44] mb-2">
+            {item.value}
           </div>
+
+          {item.label === "ISO Certified" ? (
+            <div className="inline-block relative text-sm font-medium text-[#1B5E9E]">
+              ISO Certified
+
+              {/* Animated underline */}
+              <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-[#10B981] animate-pulse rounded-full"></span>
+            </div>
+          ) : (
+            <div className="text-sm text-slate-500 font-medium">
+              {item.label}
+            </div>
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Services Preview */}
       <section className="py-20 bg-white">
@@ -210,15 +235,18 @@ export default function HomePage() {
                 View Full Capabilities
               </Button>
             </div>
-            <div className="order-1 lg:order-2 rounded-2xl overflow-hidden">
-              <Image
-                src={capabilitiesData.machine.image}
-                alt={capabilitiesData.machine.name}
-                width={1344}
-                height={768}
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            <div className="order-1 lg:order-2 flex justify-center items-center">
+
+  <Image
+    src="/images/cosmos-cvm1160.png"
+    alt="Cosmos CVM 1160 CNC Machine"
+    width={1100}
+    height={800}
+    priority
+    className="w-full max-w-3xl h-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+  />
+
+</div>
           </div>
         </div>
       </section>

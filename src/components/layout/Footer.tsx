@@ -14,17 +14,33 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Image
-              src="/images/logo.png"
-              alt="Noval Aeroethics Logo"
-              width={160}
-              height={48}
-              className="h-10 w-auto object-contain brightness-0 invert mb-4"
-            />
-            <p className="text-slate-300 text-sm leading-relaxed mt-3">
-              {companyInfo.tagline}
-            </p>
-          </div>
+  <button
+    onClick={() => navigate('home')}
+    className="flex items-center gap-4 cursor-pointer text-left"
+    aria-label="Go to Home"
+  >
+    <Image
+      src="/images/logo-icon.png"
+      alt="Noval Aeroethics"
+      width={70}
+      height={70}
+      className="h-16 w-auto object-contain"
+    />
+
+    <div>
+      <h2 className="text-2xl font-bold tracking-wide">
+        <span className="text-white">NOVAL</span>{' '}
+        <span className="text-slate-300">AEROETHICS</span>
+      </h2>
+
+      <p className="text-sm text-slate-400 mt-1">
+        Hopeful new chapter
+      </p>
+    </div>
+  </button>
+</div>
+
+{/* Quick Links */}
 
           {/* Quick Links */}
           <div>
@@ -82,9 +98,7 @@ export default function Footer() {
           <p className="text-slate-400 text-sm">
             &copy; {new Date().getFullYear()} Noval Aeroethics. All rights reserved.
           </p>
-          <p className="text-slate-500 text-xs">
-            Precision Engineering for Aerospace & Beyond
-          </p>
+          <p className="text-slate-500 text-xs">Hopeful new chapter</p>
         </div>
       </div>
     </footer>

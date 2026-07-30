@@ -19,11 +19,10 @@ export const aboutData = {
 
 export const servicesData = [
   {
-    id: 'cnc-machining',
     title: 'CNC Machining',
     shortDesc:
       'Advanced multi-axis CNC machining for complex aerospace components with exceptional precision and surface finish.',
-    image: '/images/service-cnc-machining.jpg',
+image: "/images/cnc-machine-working.jpg",
     description:
       'Our CNC machining capabilities encompass a wide range of operations including milling, turning, drilling, and boring. We utilize state-of-the-art Cosmos CVM 1160 machining centers with 3-axis and 4-axis capabilities, delivering components with position accuracy of 5 microns and repeatability accuracy of 3 microns. Our experienced machinists program and execute complex toolpaths to produce intricate geometries required in aerospace applications, ensuring every component meets strict dimensional tolerances and surface finish requirements.',
     benefits: [
@@ -49,7 +48,7 @@ export const servicesData = [
     title: 'Aerospace Components',
     shortDesc:
       'Manufacturing of critical aerospace components that meet stringent industry standards and certifications.',
-    image: '/images/service-aerospace-components.jpg',
+image: "/images/service-cnc-machining.jpg",
     description:
       'We specialize in the manufacturing of precision aerospace components that are critical to the safety and performance of aircraft systems. Every component we produce undergoes rigorous quality inspection and testing to ensure it meets or exceeds the exacting requirements of the aerospace industry. From brackets and housings to complex structural fittings, our manufacturing processes are designed to deliver components with exceptional dimensional accuracy, material integrity, and surface quality. We work with a variety of aerospace-grade materials including aluminium alloys, titanium, and stainless steel.',
     benefits: [
@@ -185,22 +184,8 @@ export const productsData = [
     description:
       'Precision machined structural brackets for aircraft assembly, featuring complex geometries with multiple mounting surfaces and lightening pockets. Manufactured from aerospace-grade aluminium alloys with tight dimensional tolerances.',
   },
-  {
-    id: 'turbine-components',
-    name: 'Turbine Components',
-    category: 'Engine Parts',
-    image: '/images/product-turbine-part.jpg',
-    description:
-      'High-precision machined components for turbine engines, including blade roots, discs, and casings. These components require exceptional accuracy and surface finish to withstand extreme operating conditions in aerospace applications.',
-  },
-  {
-    id: 'housings-enclosures',
-    name: 'Housings & Enclosures',
-    category: 'Protective Components',
-    image: '/images/product-housing.jpg',
-    description:
-      'Complex machined housings and enclosures for avionics, sensors, and electronic systems. These components feature precision bores, threaded interfaces, and sealing surfaces for reliable environmental protection.',
-  },
+  
+  
   {
     id: 'structural-fittings',
     name: 'Structural Fittings',
@@ -217,14 +202,7 @@ export const productsData = [
     description:
     'Precision turned and milled shafts, couplings, and rotational components for actuation systems and mechanical assemblies. Features include tight concentricity, surface finish control, and dimensional accuracy.',
   },
-  {
-    id: 'fasteners-fittings',
-    name: 'Fasteners & Fittings',
-    category: 'Assembly Components',
-    image: '/images/product-fasteners.jpg',
-    description:
-    'Precision machined fasteners, fittings, and connectors for aerospace assembly applications. Available in various materials and configurations, each component undergoes thorough quality inspection.',
-  },
+  
 ];
 
 export const qualityData = {
@@ -303,7 +281,7 @@ export const timelineData = [
   { year: '2026', title: 'Aerospace Partnerships', description: 'Began supplying precision components to aerospace and defense sector clients.' },
 ];
 
-export type PageId = 'home' | 'about' | 'services' | 'capabilities' | 'products' | 'quality' | 'contact';
+export type PageId = 'home' | 'about' | 'services' | 'capabilities' | 'products' | 'quality' | 'contact' | 'enquiry';
 
 export const navItems: { label: string; page: PageId }[] = [
   { label: 'Home', page: 'home' },

@@ -63,12 +63,12 @@ export default function CapabilitiesPage() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <Image
-                src={machine.image}
-                alt={machine.name}
-                width={1344}
-                height={768}
-                className="w-full h-auto object-cover"
-              />
+  src="/images/cosmos-cvm1160.png"
+  alt="Cosmos CVM 1160"
+  width={1400}
+  height={900}
+  className="w-full h-auto object-contain rounded-2xl"
+/>
             </div>
           </div>
         </div>

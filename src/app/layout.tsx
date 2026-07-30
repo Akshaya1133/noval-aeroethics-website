@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'ISO Certified',
   ],
   icons: {
-    icon: '/images/logo.png',
+    icon: '/images/logo-icon.png',
   },
 };
 

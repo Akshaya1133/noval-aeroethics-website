@@ -20,28 +20,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between gap-4 py-3 md:py-4">
-          {/* ================= BRAND (Logo + Name) ================= */}
-          <button
-            onClick={() => handleNav('home')}
-            className="flex items-center gap-3 cursor-pointer flex-shrink-0"
-            aria-label="Go to Home"
-          >
-            <Image
-              src="/images/logo-icon.png"
-              alt="Noval Aeroethics"
-              width={64}
-              height={70}
-              className="h-9 sm:h-[42px] md:h-12 w-auto object-contain flex-shrink-0"
-              priority
-            />
-            <span className="flex flex-col leading-tight text-left">
+<div className="flex items-center justify-between gap-4 py-1.5">         <button
+  onClick={() => handleNav('home')}
+  className="flex items-center gap-3 cursor-pointer flex-shrink-0"
+>
+  <Image
+    src="/images/logo-icon.png"
+    alt="Noval Aeroethics"
+    width={64}
+    height={64}
+    priority
+    className="w-[72px] h-[72px] object-contain flex-shrink-0"
+  />
+
+  <span className="flex flex-col leading-tight text-left">
               <span className="whitespace-nowrap text-base sm:text-lg md:text-xl text-[#0A1F44] tracking-wide">
                 <span className="font-bold">NOVAL</span>{' '}
                 <span className="font-medium text-slate-600">AEROETHICS</span>
               </span>
               <span className="hidden sm:block text-[11px] md:text-xs text-slate-500 mt-0.5">
-                Precision Aerospace Engineering
+                Hopeful new chapter
               </span>
             </span>
           </button>
@@ -66,7 +64,7 @@ export default function Header() {
           {/* ================= GET QUOTE ================= */}
           <div className="hidden lg:block flex-shrink-0">
             <Button
-              onClick={() => handleNav('contact')}
+              onClick={() => handleNav('enquiry')}
               className="bg-[#1B5E9E] hover:bg-[#0A1F44] text-white px-6 py-3 rounded-lg font-semibold"
             >
               Get Quote
@@ -87,13 +85,12 @@ export default function Header() {
               </SheetTitle>
 
               <div className="border-b p-6">
-                <div className="flex items-center gap-3">
-                  <Image
+<div className="flex items-center justify-center gap-3">                  <Image
                     src="/images/logo-icon.png"
                     alt="Noval Aeroethics"
-                    width={64}
-                    height={70}
-                    className="h-9 w-auto object-contain flex-shrink-0"
+                    width={96}
+                    height={96}
+                    className="h-12 w-auto object-contain flex-shrink-0"
                   />
                   <div className="flex flex-col leading-tight">
                     <span className="text-lg text-[#0A1F44] tracking-wide">
@@ -101,7 +98,7 @@ export default function Header() {
                       <span className="font-medium text-slate-600">AEROETHICS</span>
                     </span>
                     <span className="text-[11px] text-slate-500 mt-0.5">
-                      Precision Aerospace Engineering
+                      Hopeful new chapter
                     </span>
                   </div>
                 </div>
@@ -125,7 +122,7 @@ export default function Header() {
 
               <div className="p-4 mt-auto">
                 <Button
-                  onClick={() => handleNav('contact')}
+                  onClick={() => handleNav('enquiry')}
                   className="w-full bg-[#1B5E9E] hover:bg-[#0A1F44]"
                 >
                   Get Quote
