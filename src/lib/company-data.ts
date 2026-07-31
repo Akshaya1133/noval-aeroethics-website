@@ -216,8 +216,8 @@ export const qualityData = {
   policyDescription:
     'At Noval Aeroethics, our quality policy is the cornerstone of our operations. We are committed to delivering high-quality products through optimized cost management, ensuring on-time delivery, and maintaining unwavering reliability. Every component we manufacture undergoes rigorous inspection and testing to guarantee it meets the exacting standards required by the aerospace and defense industries. Our ISO certification reflects our systematic approach to quality management and our dedication to continuous improvement in every aspect of our manufacturing processes.',
   instruments: [
-    { name: 'Vernier Caliper', description: 'For precise measurement of external and internal dimensions with accuracy up to 0.02mm' },
-    { name: 'Micrometer', description: 'For high-precision measurement of thickness, diameter, and length with accuracy up to 0.01mm' },
+    { name: 'Vernier Caliper', description: 'For precise measurement of external and internal dimensions with accuracy up to 0.01 mm' },
+    { name: 'Micrometer', description: 'For high-precision measurement of thickness, diameter, and length with accuracy up to 0.001 mm' },
     { name: 'Height Gauge', description: 'For accurate vertical measurement and layout work on surface plates' },
     { name: 'Dial Indicator', description: 'For measuring small variations in dimension, runout, and flatness' },
     { name: 'Pin Gauges', description: 'For verifying hole diameters and ensuring conformance to tight tolerances' },

@@ -8,43 +8,48 @@ import { productsData } from '@/lib/company-data';
 export default function ProductsPage() {
   const { navigate } = useNavigation();
 
-  const categories = Array.from(new Set(productsData.map((p) => p.category)));
 
   return (
     <div>
       {/* Hero Banner */}
-      <section className="bg-[#0A1F44] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
-            Our Products
-          </p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white max-w-3xl">
-            We Deliver the Best... Always
-          </h1>
-          <p className="mt-4 text-slate-300 text-lg max-w-2xl">
-            Precision machined components for aerospace, defense, and precision engineering applications.
-          </p>
-        </div>
-      </section>
+<section className="relative overflow-hidden h-[320px] lg:h-[360px] flex items-center">
 
-      {/* Product Categories */}
-      <section className="py-8 bg-[#F8FAFC] border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-1.5 bg-[#0A1F44] text-white text-sm font-medium rounded-full">
-              All Products
-            </span>
-            {categories.map((cat) => (
-              <span
-                key={cat}
-                className="px-4 py-1.5 bg-white text-slate-600 text-sm font-medium rounded-full border border-slate-200"
-              >
-                {cat}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+  {/* Background Image */}
+  <Image
+    src="/images/products-banner.jpg"
+    alt="Precision Products"
+    fill
+    priority
+    className="object-cover object-center"
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#081A3A]/90 via-[#0A1F44]/75 to-[#0A1F44]/35" />
+
+  {/* Hero Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+    <p className="text-[#10B981] font-semibold tracking-[0.25em] uppercase text-sm mb-5">
+      Our Products
+    </p>
+
+    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl">
+      Precision Components
+      <br />
+      Built to Perform
+    </h1>
+
+    <p className="mt-5 text-lg text-slate-200 max-w-2xl leading-relaxed">
+      High-quality machined components manufactured for aerospace,
+      defense, automotive, and precision engineering applications with
+      exceptional dimensional accuracy and surface finish.
+    </p>
+
+  </div>
+
+</section>
+
+      
 
       {/* Product Grid */}
       <section className="py-20 bg-white">

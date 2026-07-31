@@ -8,16 +8,37 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="bg-[#0A1F44] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
-            About Noval Aeroethics
-          </p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white max-w-3xl">
-            Precision Engineering, Built on Trust and Excellence
-          </h1>
-        </div>
-      </section>
+<section className="relative overflow-hidden h-[320px] lg:h-[360px] flex items-center bg-[#0A1F44]">
+  {/* Background Image */}
+  <Image
+    src="/images/about-banner.jpg"
+    alt="About Noval Aeroethics"
+    fill
+    priority
+    className="object-cover"
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#081A3A]/90 via-[#0A1F44]/80 to-[#0A1F44]/65" />
+
+  {/* Hero Content */}
+<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 w-full">
+    <p className="text-[#10B981] font-semibold text-sm tracking-[0.25em] uppercase mb-5">
+      About Noval Aeroethics
+    </p>
+
+<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl">      Precision Engineering,
+      <br />
+      Built on Trust and Excellence
+    </h1>
+
+<p className="mt-5 text-base lg:text-lg text-slate-200 max-w-2xl leading-relaxed">      Delivering aerospace-grade precision machining, advanced manufacturing,
+      and uncompromising quality through cutting-edge technology and skilled engineering.
+    </p>
+
+  </div>
+
+</section>
 
       {/* Company Story */}
       <section className="py-20 bg-white">

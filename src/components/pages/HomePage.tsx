@@ -105,8 +105,8 @@ export default function HomePage() {
 </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section className="pt-20 pb-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
               What We Do
@@ -288,15 +288,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Button
-              onClick={() => navigate('products')}
-              variant="outline"
-              className="border-[#0A1F44] text-[#0A1F44] hover:bg-white px-8 py-3 rounded-lg text-base font-semibold"
-            >
-              View All Products
-            </Button>
-          </div>
+          
         </div>
       </section>
     </div>

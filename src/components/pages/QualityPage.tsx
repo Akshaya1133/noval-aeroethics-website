@@ -19,45 +19,85 @@ export default function QualityPage() {
         </div>
       </section>
 
-      {/* ISO Certification */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
-                Certification
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1F44] mb-6">
-                ISO Certified Operations
-              </h2>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                Noval Aeroethics operates under a certified quality management system that governs every aspect of our manufacturing process. Our ISO certification demonstrates our commitment to maintaining international quality standards, continuous improvement, and customer satisfaction across all operations.
-              </p>
-              <div className="flex items-center gap-3 bg-[#F8FAFC] rounded-xl p-5 border border-slate-100">
-                <div className="w-12 h-12 rounded-lg bg-[#10B981] flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#0A1F44]">ISO Certified Company</p>
-                  <p className="text-xs text-slate-500">Quality Management System Implemented</p>
-                </div>
-              </div>
+     {/* ISO Certification */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      {/* Left Content */}
+      <div>
+        <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
+          Certification
+        </p>
+
+        <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1F44] mb-6">
+          ISO Certified Operations
+        </h2>
+
+        <p className="text-slate-600 leading-relaxed mb-8">
+          Noval Aeroethics operates under a certified quality management
+          system that governs every aspect of our manufacturing process.
+          Our ISO certification demonstrates our commitment to maintaining
+          international quality standards, continuous improvement, and
+          customer satisfaction across all operations.
+        </p>
+
+        {/* Clickable Certificate Card */}
+        <a
+          href="/certificates/iso-9001.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 hover:border-[#10B981] hover:shadow-lg transition-all duration-300"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-xl bg-[#10B981] flex items-center justify-center flex-shrink-0">
+              <Shield className="w-7 h-7 text-white" />
             </div>
-            <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 flex items-center justify-center">
-                <Image
-                  src="/images/quality-instruments.jpg"
-                  alt="Quality measuring instruments"
-                  width={1344}
-                  height={768}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-[#0A1F44]">
+                ISO 9001:2015 Certificate
+              </h3>
+
+              <p className="text-sm text-slate-500">
+                Click here to view the certificate
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6 text-[#10B981] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M7 17L17 7M17 7H8M17 7V16"
+            />
+          </svg>
+        </a>
+      </div>
+
+      {/* Right Image */}
+      <div className="flex justify-center">
+        <div className="w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200">
+          <Image
+            src="/images/quality-instruments.jpg"
+            alt="Quality measuring instruments"
+            width={1344}
+            height={768}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Quality Policy */}
       <section className="py-20 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,27 +19,80 @@ export default function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const whatsappNumber = "918489992025";
+
+  const whatsappMessage = `*New Website Enquiry*
+
+*Name:* ${formState.name}
+*Email:* ${formState.email}
+*Phone:* ${formState.phone}
+*Company:* ${formState.company || "N/A"}
+*Subject:* ${formState.subject}
+
+*Message:*
+${formState.message}`;
+
+  const whatsappUrl = `https://wa.me/918489992025?text=${encodeURIComponent(
+  whatsappMessage
+)}`;
+
+window.open(whatsappUrl, "_blank");
+
+  // Clear the form
+  setFormState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
+
+  // Uncomment this only if you really want to show the success screen
+  // setSubmitted(true);
+};
 
   return (
     <div>
       {/* Hero Banner */}
-      <section className="bg-[#0A1F44] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
-            Get in Touch
-          </p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white max-w-3xl">
-            Let&apos;s Work Together
-          </h1>
-          <p className="mt-4 text-slate-300 text-lg max-w-2xl">
-            We are looking forward to when we can work together. Reach out to us for quotes, inquiries, or partnerships.
-          </p>
-        </div>
-      </section>
+<section className="relative overflow-hidden h-[320px] lg:h-[360px] flex items-center">
+
+  {/* Background Image */}
+  <Image
+    src="/images/contact-banner.jpg"
+    alt="Contact Noval Aeroethics"
+    fill
+    priority
+    className="object-cover object-center"
+  />
+
+  {/* Overlay */}
+<div className="absolute inset-0 bg-gradient-to-r from-[#081A3A]/95 via-[#0A1F44]/85 to-[#0A1F44]/45" />
+  {/* Hero Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+    <p className="text-[#10B981] font-semibold tracking-[0.25em] uppercase text-sm mb-5">
+      Contact Us
+    </p>
+
+    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl">
+      Let's Build
+      <br />
+      Tomorrow Together
+    </h1>
+
+    <p className="mt-5 text-lg text-slate-200 max-w-2xl leading-relaxed">
+      Whether you need precision CNC machining, aerospace components,
+      or custom manufacturing solutions, our team is ready to discuss
+      your requirements and deliver with confidence.
+    </p>
+
+  </div>
+
+</section>
 
       {/* Contact Content */}
       <section className="py-20 bg-white">
