@@ -8,16 +8,42 @@ export default function QualityPage() {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="bg-[#0A1F44] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#10B981] font-semibold text-sm tracking-wide uppercase mb-3">
-            Quality Assurance
-          </p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white max-w-3xl">
-            Committed to Excellence in Every Component
-          </h1>
-        </div>
-      </section>
+<section className="relative overflow-hidden h-[320px] lg:h-[360px] flex items-center">
+
+  {/* Background Image */}
+  <Image
+    src="/images/quality-banner.jpg"
+    alt="Quality Assurance"
+    fill
+    priority
+    className="object-cover object-center"
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#081A3A]/90 via-[#0A1F44]/75 to-[#0A1F44]/35" />
+
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+    <p className="text-[#10B981] font-semibold tracking-[0.25em] uppercase text-sm mb-5">
+      Quality Assurance
+    </p>
+
+    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl">
+      Committed to Excellence
+      <br />
+      in Every Component
+    </h1>
+
+    <p className="mt-5 text-lg text-slate-200 max-w-2xl leading-relaxed">
+      Every component undergoes rigorous inspection using calibrated
+      measuring instruments and ISO 9001:2015 quality processes to ensure
+      precision, reliability, and customer satisfaction.
+    </p>
+
+  </div>
+
+</section>
 
      {/* ISO Certification */}
 <section className="py-20 bg-white">
